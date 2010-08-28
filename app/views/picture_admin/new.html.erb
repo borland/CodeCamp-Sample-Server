@@ -1,0 +1,15 @@
+<% form_for @picture, :url => person_admin_picture_admin_index_path(@person), :html => {:method => 'post', :multipart => true} do |f| %>
+  <table>
+    <tr>
+      <td>Caption</td>
+      <td><%= f.text_field :caption %></td>
+    </tr>
+    <tr>
+      <td>File</td>
+      <td><%= f.file_field :image %></td>
+    </tr>
+  </table>
+  
+  <%= f.submit 'Create' %> |
+  <%= link_to 'Back to List', person_admin_picture_admin_index_path(@person)%>
+<% end %>

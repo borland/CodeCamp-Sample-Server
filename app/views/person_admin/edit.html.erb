@@ -1,0 +1,24 @@
+Editing <%=h @person.name %>
+
+<% form_for @person, :url => {:action => 'update', :id => @person}, :method => 'post' do |f| %>
+  <table>
+    <tr>
+      <td>First Name</td>
+      <td><%= f.text_field :first_name %></td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td><%= f.text_field :last_name %></td>
+    </tr>
+    <tr>
+      <td>Phone Number</td>
+      <td><%= f.text_field :phone_number %></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><%= f.text_area :address %></td>
+    </tr>
+  </table>
+  
+  <%= f.submit 'Update' %>
+<% end %>

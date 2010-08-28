@@ -1,0 +1,20 @@
+* {
+	font-family: Helvetica, Arial;
+	font-size: 13px;
+	color: #444444;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0; padding: 0;
+}
+
+li {
+	padding: 6px;
+}
+
+li:hover {
+	background: #2080ff;
+	color: white;
+}
+li:hover * { color: white; }

@@ -1,0 +1,20 @@
+<html>
+<h1>People</h1>
+
+<ul>
+<% @people.each do |person| %>
+  <li>
+    <%= person.first_name %> <%= person.last_name %>
+    <%= link_to 'View', :action => 'show', :id => person %> | 
+    <%= link_to 'Pictures', person_admin_picture_admin_index_path(person.id) %> | 
+    <%= link_to 'Edit', :action => 'edit', :id => person %> | 
+    <%= link_to 'Delete', person_admin_path(person), :method => 'delete' %>
+  </li>
+<% end %>
+</ul>
+
+<hr noshade />
+<%= link_to "Create", :action => 'new' %>
+<hr noshade />
+<%= link_to 'Silverlight!', '/sl/TestPage.html' %>
+</html>

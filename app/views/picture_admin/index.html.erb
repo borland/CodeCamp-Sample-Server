@@ -1,0 +1,16 @@
+<html>
+<h1>Pictures for <%= @person.name %></h1>
+
+<ul>
+<% @pictures.each do |picture| %>
+  <li>
+    <image src="<%= person_picture_url(@person, picture) %>" alt="<%= picture.caption %>" width='320' />
+    <%= link_to 'Delete', person_admin_picture_admin_url(@person, picture), :method => 'delete' %>
+  </li>
+<% end %>
+</ul>
+
+<hr noshade />
+<%= link_to "Upload", :action => 'new' %> |
+<%= link_to "Back to Person List", person_admin_index_path %>
+</html>
