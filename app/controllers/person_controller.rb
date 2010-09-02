@@ -1,7 +1,8 @@
 # this is a resource controller. Json is how we roll
 class PersonController < ApplicationController
   def index
-    render :json => Person.all(:select => 'id, first_name, last_name').map(&:attributes)
+    render :json => Person.
+      all(:select => 'id, first_name, last_name').map(&:attributes)
   end
   
   def show
